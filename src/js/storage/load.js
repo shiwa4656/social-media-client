@@ -5,3 +5,4 @@ export const load = (key) => {
 		return null;
 	}
 };
+
