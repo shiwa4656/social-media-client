@@ -1,0 +1,46 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": "eslint:recommended",
+  "overrides": [
+    {
+      "files": ["**/*.cy.js"],
+      "env": {
+        "cypress/globals": true
+      },
+      "plugins": ["cypress"],
+      "extends": ["plugin:cypress/recommended"],
+      "rules": {
+        "cypress/no-unnecessary-waiting": "off",
+        "no-unused-vars": "off"
+      }
+    },
+    {
+      "files": ["**/*.test.js"],
+      "env": {
+        "jest": true
+      },
+      "plugins": ["jest"],
+      "extends": ["plugin:jest/recommended"],
+      "rules": {
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error"
+      }
+    }
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-undef": "error",
+    "no-unused-vars": "warn"
+  }
+}
