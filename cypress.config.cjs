@@ -1,3 +1,4 @@
+// Rename to cypress.config.cjs
 const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
@@ -7,9 +8,3 @@ module.exports = defineConfig({
     },
   },
 });
-
-module.exports = (on, config) => {
-  // To avoid warnings about unused variables:
-  void on;
-  void config;
-};
