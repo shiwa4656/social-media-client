@@ -11,11 +11,11 @@ This project is a social media client application with a focus on code quality, 
    - [Unit Tests (Jest)](#unit-tests-jest)
    - [End-to-End Tests (Cypress)](#end-to-end-tests-cypress)
 5. [Code Quality and Linting](#code-quality-and-linting)
-   - [ESLint](#eslint)
+   - [ESLint](##ESLint)
    - [Prettier](#prettier)
    - [Pre-commit Hooks (Husky and lint-staged)](#pre-commit-hooks-husky-and-lint-staged)
 6. [Contributing](#contributing)
-7. [License](#license)
+
 
 ---
 
@@ -40,16 +40,21 @@ git checkout workflow
 npm run build
 npm run start
 ### Testing
-##Unit Tests (Jest)
+## Unit Tests (Jest)
+
 npm run test
 ## End-to-End Tests (Cypress)
+
 npm run test-e2e
 
 ##ESLint
+
 npm run lint
 
 ## Prettier
+
 npm run format
 
 ### Pre-commit Hooks (Husky and lint-staged)
+
 The project uses Husky and lint-staged to enforce code quality before commits. Prettier and ESLint will automatically run on staged files, and if any issues are found, the commit will be blocked.
