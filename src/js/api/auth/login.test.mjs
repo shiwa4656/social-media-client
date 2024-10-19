@@ -26,19 +26,21 @@ describe('login function', () => {
     // Mock a successful fetch response
     global.fetch.mockResolvedValueOnce({
       ok: true,
-      json: async () => ({ token: 'testToken', profile: { name: 'Test User' } }),
+      json: async () => ({
+        token: 'testToken',
+        profile: { name: 'Test User' },
+      }),
     });
 
     // Call the login function
     await login('test@example.com', 'password');
 
     // Debugging line - print all calls to localStorage.setItem
-   
 
     // Verify that setItem is called with the combined token and profile data
     expect(window.localStorage.setItem).toHaveBeenCalledWith(
       'profile',
-      JSON.stringify({ token: 'testToken', profile: { name: 'Test User' } })
+      JSON.stringify({ token: 'testToken', profile: { name: 'Test User' } }),
     );
   });
 
@@ -50,6 +52,8 @@ describe('login function', () => {
       statusText: 'Unauthorized', // Adding statusText to simulate the error message
     });
 
-    await expect(login('test@example.com', 'wrongpassword')).rejects.toThrow('Unauthorized');
+    await expect(login('test@example.com', 'wrongpassword')).rejects.toThrow(
+      'Unauthorized',
+    );
   });
 });

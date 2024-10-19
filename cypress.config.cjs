@@ -1,10 +1,9 @@
-// Rename to cypress.config.cjs
-const { defineConfig } = require('cypress');
 
-module.exports = defineConfig({
+module.exports = {
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      // Implement node event listeners or tasks here
+      return config; // Return the Cypress config object
     },
   },
-});
+};

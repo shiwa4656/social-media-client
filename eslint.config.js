@@ -1,5 +1,3 @@
-// eslint.config.js
-
 import js from '@eslint/js';
 import prettier from 'eslint-plugin-prettier';
 import cypress from 'eslint-plugin-cypress';
@@ -8,7 +6,7 @@ import jest from 'eslint-plugin-jest';
 export default [
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.{js,mjs}'], // include both js and mjs
     ignores: ['node_modules'],
     plugins: {
       prettier,
@@ -21,8 +19,8 @@ export default [
       'no-unused-vars': 'warn',
     },
     languageOptions: {
-      ecmaVersion: 'latest', // Use the latest ECMAScript version
-      sourceType: 'module', // Specify the source type, 'module' for ES modules
+      ecmaVersion: 'latest', // latest ECMAScript version
+      sourceType: 'module',
       globals: {
         document: 'readonly',
         window: 'readonly',
@@ -35,26 +33,21 @@ export default [
         alert: 'readonly',
         localStorage: 'readonly',
         Image: 'readonly',
-        // Add Cypress globals
-        cy: 'readonly',
+        cy: 'readonly', // Cypress globals
         Cypress: 'readonly',
-        // Add Jest globals
-        describe: 'readonly',
+        describe: 'readonly', // Jest globals
         it: 'readonly',
         expect: 'readonly',
         beforeEach: 'readonly',
         afterEach: 'readonly',
+        global: 'readonly',
         jest: 'readonly',
-        global: 'readonly', // Needed for Jest-related globals
       },
     },
   },
-  // Cypress-specific overrides
   {
-    files: ['**/*.cy.js'],
-    plugins: {
-      cypress,
-    },
+    files: ['**/*.cy.js'], // Cypress-specific
+    plugins: { cypress },
     rules: {
       'cypress/no-unnecessary-waiting': 'off',
       'no-unused-vars': 'off',
@@ -66,12 +59,9 @@ export default [
       },
     },
   },
-  // Jest-specific overrides
   {
-    files: ['**/*.test.js'],
-    plugins: {
-      jest,
-    },
+    files: ['**/*.test.js', '**/*.test.mjs'], // Jest-specific
+    plugins: { jest },
     rules: {
       'jest/no-disabled-tests': 'warn',
       'jest/no-focused-tests': 'error',
@@ -88,17 +78,6 @@ export default [
         beforeEach: 'readonly',
         afterEach: 'readonly',
         global: 'readonly',
-      },
-    },
-  },
-  // Node.js specific files (for config files like jest.config.js, babel.config.js, etc.)
-  {
-    files: ['jest.config.js', 'babel.config.js', 'cypress.config.js'],
-    languageOptions: {
-      globals: {
-        module: 'readonly',
-        require: 'readonly',
-        exports: 'readonly',
       },
     },
   },
