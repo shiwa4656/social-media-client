@@ -11,8 +11,8 @@ This project is a social media client application with a focus on code quality, 
    - [Unit Tests (Jest)](#unit-tests-jest)
    - [End-to-End Tests (Cypress)](#end-to-end-tests-cypress)
 5. [Code Quality and Linting](#code-quality-and-linting)
-   - [ESLint](##ESLint)
-   - [Prettier](#prettier)
+   - [ESLint](#ESLint)
+   - [Prettier](#Prettier)
    - [Pre-commit Hooks (Husky and lint-staged)](#pre-commit-hooks-husky-and-lint-staged)
 6. [Contributing](#contributing)
 
@@ -47,7 +47,7 @@ npm run test
 
 npm run test-e2e
 
-##ESLint
+## ESLint
 
 npm run lint
 
