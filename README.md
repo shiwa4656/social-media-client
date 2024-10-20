@@ -35,10 +35,16 @@ Before you begin, make sure you have the following installed:
    git branch
    master
    - workflow
-  git checkout workflow
+    git checkout workflow
+ 
   npm run build
+  
+
+
   npm run start
+   
    ```
+
 
 
 
