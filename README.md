@@ -39,11 +39,8 @@ Before you begin, make sure you have the following installed:
 
    ```
 
-   npm install
+npm install
 
-npm run build
-
-npm run start
 
 ### Testing
 
