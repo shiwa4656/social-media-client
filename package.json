@@ -7,7 +7,7 @@
   "scripts": {
     "build": "sass src/scss:dist/css",
     "start": "npm run build && live-server --port=5501",
-    "lint": "eslint .",
+    "lint": "npm run format && eslint .",
     "format": "prettier --write .",
     "prepare": "husky install",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
