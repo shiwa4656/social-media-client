@@ -34,12 +34,13 @@ Before you begin, make sure you have the following installed:
    npm install
    git branch
    master
-   ```
-
-- workflow
+   - workflow
   git checkout workflow
   npm run build
   npm run start
+   ```
+
+
 
 ### Testing
 
