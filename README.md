@@ -31,7 +31,6 @@ Before you begin, make sure you have the following installed:
    ```bash
    git clone https://github.com/shiwa4656/social-media-client.git
    cd social-media-client
-   npm install
    git branch
    master
    - workflow
@@ -39,6 +38,7 @@ Before you begin, make sure you have the following installed:
 
    ```
 
+    npm install
  
   npm run build
   
@@ -59,13 +59,13 @@ npm run test
 
 npm run test-e2e
 
-## ESLint
-
-npm run lint
-
 ## Prettier
 
 npm run format
+
+## ESLint
+
+npm run lint
 
 ### Pre-commit Hooks (Husky and lint-staged)
 
