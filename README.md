@@ -16,7 +16,6 @@ This project is a social media client application with a focus on code quality, 
    - [Pre-commit Hooks (Husky and lint-staged)](#pre-commit-hooks-husky-and-lint-staged)
 6. [Contributing](#contributing)
 
-
 ---
 
 ## Installation
@@ -32,17 +31,22 @@ Before you begin, make sure you have the following installed:
    ```bash
    git clone https://github.com/shiwa4656/social-media-client.git
    cd social-media-client
-npm install
-git branch
-  master
-* workflow
-git checkout workflow
-npm run build
-npm run start
+   npm install
+   git branch
+   master
+   ```
+
+- workflow
+  git checkout workflow
+  npm run build
+  npm run start
+
 ### Testing
+
 ## Unit Tests (Jest)
 
 npm run test
+
 ## End-to-End Tests (Cypress)
 
 npm run test-e2e
