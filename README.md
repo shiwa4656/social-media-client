@@ -36,14 +36,15 @@ Before you begin, make sure you have the following installed:
    master
    - workflow
     git checkout workflow
+
+   ```
+
  
   npm run build
   
 
+  npm run start 
 
-  npm run start
-   
-   ```
 
 
 
