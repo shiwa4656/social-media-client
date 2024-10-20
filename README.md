@@ -48,7 +48,7 @@ npm install
 
 npm run test
 
-## End-to-End Tests (Cypress)
+## End-to-End Tests (Cypress)(important notice, readfile i send, one of the 3 tests(1st) will fail, dont worry, rerun and it will work)
 
 npm run test-e2e
 
