@@ -28,6 +28,7 @@ Before you begin, make sure you have the following installed:
 ### Steps to Install:
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/shiwa4656/social-media-client.git
    cd social-media-client
@@ -38,16 +39,11 @@ Before you begin, make sure you have the following installed:
 
    ```
 
-    npm install
- 
-  npm run build
-  
+   npm install
 
-  npm run start 
+npm run build
 
-
-
-
+npm run start
 
 ### Testing
 
